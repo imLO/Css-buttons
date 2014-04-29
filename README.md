@@ -1,4 +1,7 @@
 Css-buttons
 ===========
-Simple css-buttons
-demo page
+On-going project
+
+Buttons built with only CSS
+
+[Demo page](http://imlo.github.io/Css-buttons/)
