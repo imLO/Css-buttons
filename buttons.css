@@ -1,0 +1,192 @@
+html{
+	font-family: Helvetica, Arial, "Lucida Grande", sans-serif;
+	color: white;
+	background: url("bg.jpg") no-repeat center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+/*--##Shared by All Sets##--*/
+.button{
+	position: relative;
+	display: inline-block;
+	font-family: Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-size: 21px;
+	width: 140px;
+	height: 30px;
+	line-height: 30px;
+}
+.button span{
+	position: absolute;
+}
+.text{
+	z-index:100;
+	width:100%;
+	text-align: center;
+	color: #fff;
+	text-shadow: 1px 1px 1px #7e7e7e;
+	-webkit-transition: all 0.6s ease;
+	-moz-transition: all 0.6s ease;
+	-o-transition: all 0.6s ease;
+	transition: all 0.6s ease;
+}
+
+/*--##Set 1 - Animated background fill##---*/
+/*--##Shared by Set 1, Set 2##--*/
+.animated-fill,.moving-line{
+	background: #000;
+	-webkit-transition: all 0.6s ease;
+	-moz-transition: all 0.6s ease;
+	-o-transition: all 0.6s ease;
+	transition: all 0.6s ease;
+}
+
+/*animated from-left*/
+.from-left{
+	width: 0%;
+	height: 100%;
+}
+.button:hover .from-left{
+    width: 100%;
+}
+/*animated from-top*/
+.from-top{
+	width: 100%;
+	height: 0%;
+}
+.button:hover .from-top{
+    height: 100%;
+}
+/*animated from-right*/
+.from-right{
+	right: 0px;
+	width: 0%;
+	height: 100%;
+}
+.button:hover .from-right{
+    width: 100%;
+}
+/*animated from bottom*/
+.from-bottom{
+	bottom: 0px;
+	width: 100%;
+	height: 0%;
+}
+.button:hover .from-bottom{
+    height: 100%;
+}
+
+/*--##Set 2 - Animated moving line##---*/
+.moving-line{
+	background: white;
+}
+.moving-line.horizontal{
+	height:2px;
+}
+.moving-line.vertical{
+	width:2px;
+}
+.top{
+	top:0;
+}
+.bottom{
+	bottom:0;
+}
+.left{
+	left:0;
+}
+.right{
+	right:0;
+}
+.delay{
+	-webkit-transition-delay: 0.5s;
+	-moz-transition-delay: 0.5s;
+	-o-transition-delay: 0.5s;
+	transition-delay: 0.5s;
+}
+
+/*--##Set 3 - Character spacing##--*/
+.condense{
+	letter-spacing: 2px;
+}
+.condense:hover{
+	letter-spacing: 0px;
+}
+.expand{
+	letter-spacing: 0px;
+}
+.expand:hover{
+	letter-spacing: 2px;
+}
+.bigger{
+	letter-spacing: 0px;
+}
+.bigger:hover{
+	letter-spacing: 2px;
+	-webkit-transform:scale(1.2, 1.2);
+	-moz-transform: scale(1.2, 1.2);
+	-o-transform: scale(1.2, 1.2);
+	transform: scale(1.2, 1.2);
+}
+.smaller{
+	letter-spacing: 2px;
+	-webkit-transform:scale(1.2, 1.2);
+	-moz-transform: scale(1.2, 1.2);
+	-o-transform: scale(1.2, 1.2);
+	transform: scale(1.2, 1.2);
+}
+.smaller:hover{
+	letter-spacing: 0px;
+	-webkit-transform:scale(1, 1);
+	-moz-transform: scale(1, 1);
+	-o-transform: scale(1, 1);
+	transform: scale(1, 1);
+}
+
+/*--##Set 4 - Oscillating text##--*/
+.oscillate1:hover{
+	-webkit-animation: oscillate1 0.5s ease-in-out infinite alternate;
+	-moz-animation: oscillate1 0.5s ease-in-out infinite alternate;
+	-o-animation: oscillate1 0.5s ease-in-out infinite alternate;
+	animation: oscillate1 0.5s ease-in-out infinite alternate;
+}
+@-webkit-keyframes oscillate1{
+	from{-webkit-transform: translate(0px,-2px);}
+	to{-webkit-transform: translate(0px,2px);}
+}
+@-moz-keyframes oscillate1{
+	from{-moz-transform: translate(0px,-2px);}
+	to{-moz-transform: translate(0px,2px);}
+}
+@-o-keyframes oscillate1{
+	from{-o-transform: translate(0px,-2px);}
+	to{-o-transform: translate(0px,2px);}
+}
+@keyframes oscillate1{
+	from{transform: translate(0px,-2px);}
+	to{transform: translate(0px,2px);}
+}
+.oscillate2:hover{
+	-webkit-animation: oscillate2 0.5s ease-in-out infinite alternate;
+	-moz-animation: oscillate2 0.5s ease-in-out infinite alternate;
+	-o-animation: oscillate2 0.5s ease-in-out infinite alternate;
+	animation: oscillate2 0.5s ease-in-out infinite alternate;
+}
+@-webkit-keyframes oscillate2{
+	from{-webkit-transform: translate(-2px,0px);}
+	to{-webkit-transform: translate(2px,0px);}
+}
+@-moz-keyframes oscillate1{
+	from{-moz-transform: translate(-2px,0px);}
+	to{-moz-transform: translate(-2px,0px);}
+}
+@-o-keyframes oscillate1{
+	from{-o-transform: translate(-2px,0px);}
+	to{-o-transform: translate(-2px,0px);}
+}
+@keyframes oscillate1{
+	from{transform: translate(-2px,0px);}
+	to{transform: translate(-2px,0px);}
+}
