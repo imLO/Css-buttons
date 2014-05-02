@@ -1,6 +1,7 @@
 html{
 	font-family: Helvetica, Arial, "Lucida Grande", sans-serif;
 	color: white;
+<<<<<<< HEAD
 	background-image:
 	  -webkit-linear-gradient(135deg, transparent 30%, rgba(255,165,0, 0.75)),
 	  -webkit-linear-gradient(45deg, #4262A1, #002B36);
@@ -18,6 +19,9 @@ html{
 	width: 60%;
 	margin-left: auto ;
     margin-right: auto ;
+=======
+	background-color: #2B2B2B;
+>>>>>>> 8d89504ea01ac5ff555119ca98f5f980b00a0ac0
 }
 /*--##Shared by All Sets##--*/
 .button{
@@ -215,6 +219,7 @@ html{
 	from{transform: translate(-2px,0px);}
 	to{transform: translate(-2px,0px);}
 }
+<<<<<<< HEAD
 
 /*--##Set 5 - Circles##--*/
 .button.circular{
@@ -320,3 +325,5 @@ html{
 .color-fill-transparent:hover .text{
 	background-color: #E8962C;
 }
+=======
+>>>>>>> 8d89504ea01ac5ff555119ca98f5f980b00a0ac0
