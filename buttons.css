@@ -1,9 +1,28 @@
 html{
 	font-family: Helvetica, Arial, "Lucida Grande", sans-serif;
 	color: white;
-	background-color: #2B2B2B;
+	background-image:
+	  -webkit-linear-gradient(135deg, transparent 30%, rgba(255,165,0, 0.75)),
+	  -webkit-linear-gradient(45deg, #4262A1, #002B36);
+	background-image:
+	  -moz-linear-gradient(135deg, transparent 30%, rgba(255,165,0, 0.75)),
+	  -moz-linear-gradient(45deg, #4262A1, #002B36);
+	background-image:
+	  -o-linear-gradient(135deg, transparent 30%, rgba(255,165,0, 0.75)),
+	  -o-linear-gradient(45deg, #207261, #002B36);
+	background-image:
+	  linear-gradient(135deg, transparent 30%, rgba(255,165,0, 0.75)),
+	  linear-gradient(45deg, #4262A1, #002B36);
 }
-
+a{
+	text-decoration: none;
+	color: #fff;
+}
+.center{
+	width: 60%;
+	margin-left: auto ;
+    margin-right: auto ;
+}
 /*--##Shared by All Sets##--*/
 .button{
 	position: relative;
@@ -13,7 +32,13 @@ html{
 	width: 140px;
 	height: 30px;
 	line-height: 30px;
+	/*overflow: hidden;*/
 }
+
+.border{
+	border: 1px solid rgba(255, 255, 255, .3);
+}
+
 .button span{
 	position: absolute;
 }
@@ -22,7 +47,6 @@ html{
 	width:100%;
 	text-align: center;
 	color: #fff;
-	text-shadow: 1px 1px 1px #7e7e7e;
 	-webkit-transition: all 0.6s ease;
 	-moz-transition: all 0.6s ease;
 	-o-transition: all 0.6s ease;
@@ -32,11 +56,25 @@ html{
 /*--##Set 1 - Animated background fill##---*/
 /*--##Shared by Set 1, Set 2##--*/
 .animated-fill,.moving-line{
-	background: #000;
+	background: rgba(0, 0, 0, .3);
 	-webkit-transition: all 0.6s ease;
 	-moz-transition: all 0.6s ease;
 	-o-transition: all 0.6s ease;
 	transition: all 0.6s ease;
+}
+.text-transparent{
+	width:100%;
+	text-align: center;
+	color: white;
+	background: rgba(0, 0, 0, .3);
+	-webkit-transition: all 0.6s ease;
+	-moz-transition: all 0.6s ease;
+	-o-transition: all 0.6s ease;
+	transition: all 0.6s ease;
+}
+.button:hover .text-transparent{
+	background: transparent;
+	color: rgba(0, 0, 0, .5);
 }
 
 /*animated from-left*/
@@ -73,7 +111,17 @@ html{
 .button:hover .from-bottom{
     height: 100%;
 }
-
+/*animated diagonal*/
+.from-diagonal{
+	bottom: 0px;
+	left: -180px;
+	width: 120%;
+	height: 100%;
+	-webkit-transform: skew(30deg,0deg); rotate(45deg);
+}
+.button:hover .from-diagonal{
+    left: -10px;
+}
 /*--##Set 2 - Animated moving line##---*/
 .moving-line{
 	background: white;
@@ -101,6 +149,62 @@ html{
 	-moz-transition-delay: 0.5s;
 	-o-transition-delay: 0.5s;
 	transition-delay: 0.5s;
+}
+
+.button3{
+	display: inline-block;
+	height: 30px;
+    width: 140px;
+    border:2px solid #fff;
+    position: relative
+}
+.button3 .beam{
+  position: absolute;
+  background: none;
+  -moz-transition: 0.4s ease;
+  -o-transition: 0.4s ease;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+}
+.beam.top {
+  width:50%;
+  height:2px;
+  top: -2px;
+  left:-140%;
+}
+.button3:hover .beam.top {
+  left:0;
+  background:#fff
+}
+.button3 .beam.right {
+  height:50%;
+  width:2px;
+  right: -2px;
+  top:-140%;
+}
+.button3:hover .beam.right {
+  top:0;
+  background:#fff
+}
+.button3 .beam.bottom {
+  width:50%;
+  height: 2px;
+  bottom: -2px;
+  right:-140%;
+}
+.button3:hover .beam.bottom {
+  right:0;
+  background:#fff
+}
+.button3 .beam.left {
+  height:50%;
+  width: 2px;
+  left: -2px;
+  bottom:-140%;
+}
+.button3:hover .beam.left {
+  bottom:0;
+  background:#fff
 }
 
 /*--##Set 3 - Character spacing##--*/
@@ -185,4 +289,155 @@ html{
 @keyframes oscillate1{
 	from{transform: translate(-2px,0px);}
 	to{transform: translate(-2px,0px);}
+}
+
+/*--##Set 5 - Circles##--*/
+.button.circular{
+	width: 100px;
+	height:100px;
+	line-height: 100px;
+}
+.circle{
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	line-height: 100px;
+	border-radius: 50%;
+	-webkit-transition: all 0.6s ease;
+	-moz-transition: all 0.6s ease;
+	-o-transition: all 0.6s ease;
+	transition: all 0.6s ease;
+}
+.circle2{
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	line-height: 100px;
+	border-radius: 50%;
+}
+/*--Circle 1--*/
+.color-fill{
+	background-color: rgba(0, 0, 0, .3);
+}
+.button.circular:hover .scale{
+	-webkit-transform: scale(0.8, 0.8);
+	-moz-transform: scale(0.8, 0.8);
+	-o-transform: scale(0.8, 0.8);
+	transform: scale(0.8, 0.8);
+}
+/*--Circle 2--*/
+.gradient-fill{
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #FFCC33), color-stop(100%, #EB8F16));
+}
+.button.circular:hover .spin{
+	-webkit-animation: spin .6s infinite linear;
+	-moz-animation: spin .6s infinite linear;
+	-o-animation: spin .6s infinite linear;
+	animation: spin .6s infinite linear;
+}
+@-webkit-keyframes spin{
+	0%{-webkit-transform: rotateZ(0deg);}
+	100%{-webkit-transform: rotateZ(360deg);}
+}
+@-moz-keyframes spin{
+	0%{-moz-transform: rotateZ(0deg);}
+	100%{-moz-transform: rotateZ(360deg);}
+}
+@-o-keyframes spin{
+	0%{-o-transform: rotateZ(0deg);}
+	100%{-o-transform: rotateZ(360deg);}
+}
+@keyframes spin{
+	0%{transform: rotateZ(0deg);}
+	100%{transform: rotateZ(360deg);}
+}
+
+/*--Circle 3--*/
+.svg_outline{
+	fill:none;
+	stroke-width:2;
+	stroke: #FFCC33;
+	stroke-dasharray:20;
+}
+.button:hover .svg_outline{
+	-webkit-animation:rotate 3s linear infinite;
+	-moz-animation: rotate 3s linear infinite;
+	-o-animation: rotate 3s linear infinite;
+	animation: rotate 3s linear infinite;
+}
+@-webkit-keyframes rotate{
+	to {stroke-dashoffset: 200;}
+}
+@-moz-keyframes rotate{
+	to {stroke-dashoffset: 200;}
+}
+@-o-keyframes rotate{
+	to {stroke-dashoffset: 200;}
+}
+@keyframes rotate{
+	to {stroke-dashoffset: 200;}
+}
+/*Circle 4*/
+.text.static{
+	color: #FFCC33;
+}
+.text.static:hover{
+	color: #FFF;
+}
+.circle2.frame{
+	border: 2px solid #FFCC33;
+	background-color: transparent;
+	-webkit-transition: all 0.3s ease-in-out;
+	   -moz-transition: all 0.3s ease-in-out;
+	     -o-transition: all 0.3s ease-in-out;
+	        transition: all 0.3s ease-in-out;
+}
+.circle2.bgcolor{
+	border: 2px solid transparent;
+	background-color: transparent;
+	-webkit-transition: all 0.3s ease-in-out;
+	   -moz-transition: all 0.3s ease-in-out;
+	     -o-transition: all 0.3s ease-in-out;
+	        transition: all 0.3s ease-in-out;
+}
+.button:hover .circle2.frame{
+	border: 2px solid transparent;
+	background-color: #4262A1;
+	margin-top: 50%;
+	margin-left: 50%;
+	width:0;
+	height:0;
+}
+.button:hover .circle2.bgcolor{
+	border: 2px solid #FFCC33;
+	background-color: #FFCC33;
+}
+
+
+/*--##Set 6 - Changing shapes##--*/
+.button-box{
+	border-radius: 0px;
+	-webkit-transition: all 0.6s ease;
+	overflow:hidden;
+}
+.color-fill-transparent{
+	background-color: transparent;
+}
+.box{
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+}
+.button-box:hover{
+	border-radius:15px 15px 15px 0px;
+}
+.rounded-0{
+	border: 1px solid white;
+}
+.rounded-3{
+	border: 1px solid white;
+	border-radius:15px 15px 15px 0px;
+}
+.color-fill-transparent:hover .text{
+	background-color: rgba(0, 0, 0, .3);
 }
